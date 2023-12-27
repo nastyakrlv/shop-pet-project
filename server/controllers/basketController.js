@@ -14,8 +14,8 @@ class BasketController {
             const basketProduct = await BasketProduct.create({
                 basketId: basket.id,
                 productId,
-                size, // Добавляем размер
-                color, // Добавляем цвет
+                size,
+                color, 
             });
 
             return res.status(200).json(basketProduct);
@@ -45,7 +45,7 @@ class BasketController {
 
     async removeProduct(req, res, next) {
         try {
-            const { id } = req.params; // This assumes you're passing BasketProduct ID to remove
+            const { id } = req.params;
             const basketProduct = await BasketProduct.findOne({ where: { id }});
             if (!basketProduct) {
                 return next(ApiError.badRequest('Product in basket not found'));

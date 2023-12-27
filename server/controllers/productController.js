@@ -34,7 +34,7 @@ class ProductController {
         let {limit, page} = req.query;
         page = page || 1;
         limit = limit || 9;
-        let offset = (page - 1) * limit; // Вычисляем offset
+        let offset = (page - 1) * limit; 
         let products = await Product.findAndCountAll({ limit: parseInt(limit), offset: parseInt(offset) }); // Передаем limit и offset как части options объекта
         return res.json(products);
     }
