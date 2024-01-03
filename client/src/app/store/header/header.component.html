@@ -1,0 +1,83 @@
+<header>
+    <div class="button-and-logo-container">
+        <nav class="menu-mobile">
+            <button mat-icon-button [matMenuTriggerFor]="menu" class="menu-button-mobile">
+                <img src="assets/icons/nav.svg">       
+            </button>
+            <mat-menu class="menu-list-mobile" #menu="matMenu">
+                <button mat-menu-item [routerLink]="'/'"><a [class.active]="isActive('/home')">Home</a></button>
+                <button mat-menu-item [routerLink]="'/shop'"><a [class.active]="isActive('/shop')">Shop</a></button>
+            </mat-menu>
+        </nav>
+
+        <div class="logo">
+            FASCO
+        </div>
+    </div>
+    
+    <nav class="second-menu-mobile">
+        <ul class="second-menu-list-mobile">
+            @if (isAuthorized) {
+                <li>
+                    <button mat-icon-button class="exit" [routerLink]="'/'" (click)="logout()">
+                        <img src="assets/icons/exit.svg">  
+                    </button>
+                </li>
+            } @else {
+                <li>
+                    <button mat-icon-button class="account" [routerLink]="'/auth/sing-up'">
+                        <img src="assets/icons/account.svg">  
+                    </button>
+                </li>
+            }
+            <li>
+                <button mat-icon-button [matBadge]="cartQuantity" class="cart" [routerLink]="'/cart'">
+                    <img class="cart-icon" src="assets/icons/cart.svg">            
+                </button>
+            </li>
+        </ul>
+    </nav>
+
+    <nav class="menu">
+        <ul class="menu-list">
+            <li>
+                <button mat-button [routerLink]="'/'">
+                    <a [class.active]="isActive('/home')">Home</a>
+                </button>
+            </li>
+            <li>
+                <button mat-button [routerLink]="'/shop'">
+                    <a [class.active]="isActive('/shop')">Shop</a>
+                </button>
+            </li>
+        </ul>
+    </nav>
+
+    <nav class="second-menu">
+        <ul class="second-menu-list">
+            @if (isAuthorized) {
+                <li>
+                    <button mat-button class="exit" [routerLink]="'/'" (click)="logout()">
+                        Log Out 
+                    </button>
+                </li>
+            } @else {
+                <li>
+                    <button mat-button class="sing-in" [routerLink]="'/auth/sing-in'">
+                        Sing In
+                    </button>
+                </li>
+                <li>
+                    <button mat-button class="sing-up" [routerLink]="'/auth/sing-up'">
+                        Sing Up
+                    </button>
+                </li>
+            }
+            <li>
+                <button mat-icon-button [matBadge]="cartQuantity" class="cart" [routerLink]="'/cart'">
+                    <img class="cart-icon" src="assets/icons/cart.svg">            
+                </button>
+            </li>
+        </ul>
+    </nav>
+</header>

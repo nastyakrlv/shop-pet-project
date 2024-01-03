@@ -1,0 +1,19 @@
+<div class="container">
+    <h1>FASCO</h1>
+    <form [formGroup]="singUpForm" (ngSubmit)="singUp()">
+        @if (errorMessage) {
+            <p class="error">{{errorMessage}}</p>
+        }
+        <input class="email" formControlName="email" type="text" placeholder="Email Address">
+        <input class="password" formControlName="password" type="password" placeholder="Password">
+        <input class="confirm-password" formControlName="confirmPassword" type="password" placeholder="Confirm Password">
+        <button mat-button type="submit" [disabled]="singUpForm.invalid">
+            @if (!singUpIsLoading) {
+                Create Account
+            } @else {
+                <mat-spinner diameter="20" color="accent"></mat-spinner>
+            }
+        </button>
+    </form>
+    <p>Already have an account? <a [routerLink]="'../sing-in'">Login</a></p>
+</div>

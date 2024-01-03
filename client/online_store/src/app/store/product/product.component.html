@@ -1,0 +1,49 @@
+<main>
+    @if (!productIsLoading && product) {
+    <form [formGroup]="productForm" (ngSubmit)="onAddToCart()" class="product">
+        <img [src]="url + product?.img">
+        <div class="info">
+            <p class="fasco">FASCO</p>
+            <h4 class="name">{{product?.name}}</h4>
+            <p class="price">{{product?.price | currency }}</p>
+            <div class="info-param">
+                @for (info of product?.info; track info) {
+                @if (info.title.toLowerCase() === 'size') {
+                <p class="title">{{info.title | titlecase }}: {{productForm.get('size')?.value}}</p>
+
+                <mat-button-toggle-group class="description-size-group" formControlName="size">
+                    @for (size of info.description; track size) {
+                    <mat-button-toggle class="description-size" [value]="size">{{size}}</mat-button-toggle>
+                    }
+                </mat-button-toggle-group>
+
+                } @else if (info.title.toLowerCase() === 'color') {
+                <p class="title">{{info.title | titlecase }}: {{productForm.get('color')?.value}}</p>
+
+                <mat-button-toggle-group class="description-color-group" formControlName="color">
+                    @for (color of colorDescriptions; track color; let index = $index) {
+                    <mat-button-toggle class="description-color" [value]="color"
+                        [style.background]="info.description[index]"
+                        [ngStyle]="{ 'border': isSelected(color) ? '0.5px solid black' : 'none' }"></mat-button-toggle>
+                    }
+                </mat-button-toggle-group>
+
+                } @else {
+                <p class="title">{{info.title | titlecase }}</p>
+                <p class="description">{{info.description}}</p>
+                }
+                }
+            </div>
+            <button mat-button type="submit" class="cart" [disabled]="productForm.invalid">
+                @if (addToCartIsLoading) {
+                    <mat-spinner diameter="20" color="accent"></mat-spinner>
+                } @else {
+                    Add to cart
+                }
+            </button>
+        </div>
+    </form>
+    } @else {
+        <mat-spinner diameter="50"></mat-spinner>
+    }
+</main>

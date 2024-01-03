@@ -1,0 +1,152 @@
+@import '../../../style.scss';
+
+header {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px;
+}
+
+.menu-mobile,
+.second-menu-mobile {
+    display: none;
+}
+
+
+.logo {
+    color: #484848;
+    font-family: 'Volkhov', serif;
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 100%;
+}
+
+.menu-list,
+.second-menu-list {
+    list-style: none;
+    padding: 0px;
+    margin: 0px;
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+
+    li {
+        display: flex;
+        align-items: center;
+    }
+
+    .cart {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .cart-icon {
+            width: 30px;
+            height: 30px;
+        }
+    }
+
+
+    button:not(.cart) {
+        font-family: 'Poppins', sans-serif;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 40px;
+        padding: 5px 30px;
+        height: 3.2rem;
+        border-radius: 10px;
+
+        .active {
+            text-decoration: underline;
+            text-underline-offset: 6px;
+
+        }
+    }
+
+    @media (width <=720px) {
+        button:not(.cart) {
+            padding: 5px 10px;
+        }
+    }
+
+    .sing-up {
+        @extend %black-button;
+        height: 56px;
+        font-weight: 400;
+    }
+
+}
+
+
+
+
+@media (width <=580px) {
+    header {
+        margin: 10px;
+    }
+
+    .menu,
+    .second-menu {
+        display: none;
+    }
+
+    .button-and-logo-container {
+        display: flex;
+        flex-direction: row;
+
+        .menu-mobile {
+            display: flex;
+            align-items: center;
+            margin-right: 5px;
+
+            .menu-button-mobile {
+                display: flex;
+                justify-content: center;
+                background: none;
+                border: none;
+
+            }
+
+        }
+
+    }
+
+    .second-menu-mobile {
+        display: block;
+
+        .second-menu-list-mobile {
+            display: flex;
+            flex-direction: row;
+            list-style: none;
+            margin: 0px;
+            padding: 0;
+            gap: 5px;
+
+            li {
+                display: flex;
+                align-items: center;
+            }
+
+            button {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                img {
+                    width: 25px;
+                    height: 25px;
+                }
+
+                .cart-icon {
+                    width: 30px;
+                    height: 30px;
+                    ;
+                }
+            }
+
+        }
+    }
+
+
+}
