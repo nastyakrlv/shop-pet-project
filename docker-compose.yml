@@ -1,0 +1,35 @@
+version: '2.23'
+
+networks:
+  default:
+    driver: bridge
+
+services:
+  client:
+    container_name: client
+    build: ./client/
+    image: client:v1
+    ports:
+      - ${CLIENT_PORT}:${CLIENT_PORT}
+    expose:
+      - ${CLIENT_POR}
+  postgres:
+    container_name: postgres
+    image: postgres:latest
+    env_file:
+      - .env
+    ports:
+      - "${DB_PORT}:${DB_PORT}"
+  server:
+    container_name: server
+    build: ./server/
+    image: server:v1
+    env_file:
+      - .env
+    ports:
+      - ${SERVER_PORT}:${SERVER_PORT}
+    expose:
+      - ${SERVER_PORT}
+    depends_on:
+      - postgres
+
