@@ -45,7 +45,7 @@
         }
     }
 
-    @media (width <=1200px) {
+    @media (max-width: 1200px) {
         .services {
             display: grid;
             grid-template-columns: 1fr 1fr;
@@ -65,14 +65,14 @@
 
     }
 
-    @media (width <=705px) {
+    @media (max-width: 705px) {
         .services {
             width: 85%;
         }
     }
 
 
-    @media (width <=580px) {
+    @media (max-width: 580px) {
 
         .services {
             width: 90%;
@@ -133,11 +133,11 @@
 
         img {
             width: calc(100% / 7);
-            height: fit-content;
+            height: auto;
         }
     }
 
-    @media (width <=780px) {
+    @media (max-width: 780px) {
 
         .images img:first-child,
         .images img:last-child {
@@ -149,7 +149,7 @@
         }
     }
 
-    @media (width <=580px) {
+    @media (max-width: 580px) {
 
         .images img:nth-child(-n+2),
         .images img:nth-last-child(-n+2) {

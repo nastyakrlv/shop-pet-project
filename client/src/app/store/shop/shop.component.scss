@@ -56,14 +56,14 @@ mat-paginator {
     }
 }
 
-@media (width <=770px) {
+@media (max-width: 770px) {
     .products {
         width: 80%;
         grid-template-columns: repeat(2, 1fr);
     }
 }
 
-@media (width <=580px) {
+@media (max-width: 580px) {
     mat-paginator {
         width: 80%;
     }

@@ -105,13 +105,13 @@ main {
     }
 }
 
-@media (width <=770px) {
+@media (max-width: 770px) {
     .cart {
         width: 85%;
     }
 }
 
-@media (width <=580px) {
+@media (max-width: 580px) {
     .cart {
         width: 90%;
 
@@ -150,7 +150,7 @@ main {
     }
 }
 
-@media (width <=580px) {
+@media (max-width: 580px) {
     .checkout {
         width: 100%;
     }

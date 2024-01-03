@@ -161,7 +161,8 @@ export class CartComponent implements OnDestroy {
                 color: productInLS.color
               };
             })
-          )
+          ),
+          catchError((error: HttpErrorResponse) => this.handleError(error)),
         ).subscribe((response: IProductInBasket[]) => {
           this.productsInBasket = response;
           this.updateSubtotal();

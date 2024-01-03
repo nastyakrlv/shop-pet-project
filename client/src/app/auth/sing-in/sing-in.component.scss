@@ -78,7 +78,7 @@
         }
     }
 
-    @media ( width <= 600px ) {
+    @media (max-width:  600px ) {
         form {
             width: 100%; 
         }

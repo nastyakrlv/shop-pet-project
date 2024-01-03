@@ -92,7 +92,7 @@ mat-spinner {
     }
 }
 
-@media (width <=580px) {
+@media (max-width: 580px) {
     .product {
         flex-direction: column;
         align-items: normal;
