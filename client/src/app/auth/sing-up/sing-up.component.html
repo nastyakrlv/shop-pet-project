@@ -4,7 +4,7 @@
         @if (errorMessage) {
             <p class="error">{{errorMessage}}</p>
         }
-        <input class="email" formControlName="email" type="text" placeholder="Email Address">
+        <input class="email" formControlName="email" type="email" placeholder="Email Address">
         <input class="password" formControlName="password" type="password" placeholder="Password">
         <input class="confirm-password" formControlName="confirmPassword" type="password" placeholder="Confirm Password">
         <button mat-button type="submit" [disabled]="singUpForm.invalid">

@@ -4,7 +4,7 @@
         @if (errorMessage) {
             <p class="error">{{errorMessage}}</p>
         }
-        <input class="email" formControlName="email" type="text" placeholder="Email Address">
+        <input class="email" formControlName="email" type="email" placeholder="Email Address">
         <input class="password" formControlName="password" type="password" placeholder="Password">
         <button mat-button class="sing-in" type="submit" [disabled]="singInForm.invalid">
             @if (!singInIsLoading) {

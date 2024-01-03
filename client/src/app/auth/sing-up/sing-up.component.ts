@@ -59,6 +59,9 @@ export class SingUpComponent implements OnDestroy {
         this._transferLocalStorageToServerCart();
         this._router.navigate(['/']);
       });
+    } else {
+      this.errorMessage = "Пароли не совпадают";
+      this.singUpIsLoading = false;
     }
   }
 
