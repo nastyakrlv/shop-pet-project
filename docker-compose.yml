@@ -12,7 +12,7 @@ services:
     ports:
       - ${CLIENT_PORT}:${CLIENT_PORT}
     expose:
-      - ${CLIENT_POR}
+      - ${CLIENT_PORT}
   postgres:
     container_name: postgres
     image: postgres:latest
