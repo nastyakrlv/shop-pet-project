@@ -28,8 +28,8 @@ const start = async () => {
     app.listen(port, () => {
       console.log(`Example app listening on port ${port}`)
     })
-  } catch {
-    console.log("no")
+  } catch (error) {
+    console.error("Cant esttablish connection to DB: ", error)
   }
 }
 
