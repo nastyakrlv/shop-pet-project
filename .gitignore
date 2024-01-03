@@ -1,4 +1,5 @@
 /**/node_modules/
 /**/.*
+!.dockerignore
 /client/online_shop/src/app/constants.ts
 
