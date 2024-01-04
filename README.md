@@ -41,8 +41,8 @@
 Для установки и запуска данного интернет-магазина, выполните следующие шаги:
 
 1. Склонируйте репозиторий: `git clone https://github.com/nastyakrlv/shop-pet-project.git`
-2. Создание файла .env: `nano .env`
-3. Заполнение файла .env:
+2. Создайте файла .env: `nano .env`
+3. Заполните файл .env:
    
 ```
 PORT=порт, на котором запущен сервер
@@ -61,7 +61,7 @@ POSTGRES_PASSWORD=пароль
 PGUSER=postgres
 PGDATABASE=название базы данных
 ```
-4. Запуск Docker Compose: `docker-compose up -d`
+4. Запустите Docker Compose: `docker-compose up -d`
 
 ## Источники
 
