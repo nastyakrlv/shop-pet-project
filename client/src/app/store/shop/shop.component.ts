@@ -32,7 +32,7 @@ export class ShopComponent implements OnDestroy {
     this.productsIsLoading = true;
     this.url = URL;
 
-    this.length = 1;
+    this.length = 0;
     this.pageIndex = 0;
     this.pageSize = 6;
 
