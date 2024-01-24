@@ -16,6 +16,7 @@
 ## Технологии
 
 - Angular
+- RxJS
 - HTML
 - SCSS
 - TypeScript
