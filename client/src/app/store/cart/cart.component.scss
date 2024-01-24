@@ -26,7 +26,7 @@ main {
 
     color: #000;
     text-align: center;
-    font-family: 'Volkhov';
+    font-family: 'Volkhov', serif;
     font-size: 1.4rem;
     font-weight: 400;
     line-height: 32px;
@@ -67,6 +67,7 @@ main {
 
                 img {
                     height: 250px;
+                    aspect-ratio: 302/403;
                 }
 
                 .info {
@@ -81,14 +82,14 @@ main {
                     .size {
                         margin: 6px 0;
                         color: #8A8A8A;
-                        font-family: 'Poppins';
+                        font-family: 'Poppins', sans-serif;
                         line-height: 42px;
                     }
 
                     button {
                         padding: 0;
                         color: #8A8A8A;
-                        font-family: 'Poppins';
+                        font-family: 'Poppins', sans-serif;
                         font-size: 1.4rem;
                         font-weight: 400;
                         line-height: 42px;
@@ -119,7 +120,8 @@ main {
             flex-direction: column;
 
             img {
-                height: 320px;
+                height: 300px;
+                aspect-ratio: 302/403;
             }
         }
     }
@@ -132,7 +134,7 @@ main {
     align-self: end;
 
     color: #000;
-    font-family: 'Volkhov';
+    font-family: 'Volkhov', serif;
     font-size: 1.4rem;
     font-weight: 400;
     line-height: 32px;
