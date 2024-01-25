@@ -1,4 +1,4 @@
-import { Component, OnDestroy, OnInit } from '@angular/core';
+import { Component, OnDestroy } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { StoreService } from '../store.service';
 import { Observable, ReplaySubject, catchError, finalize, takeUntil, throwError } from 'rxjs';
@@ -19,6 +19,7 @@ import { LocalStorageKeys } from '../../types/localstorage-keys.enum';
   selector: 'app-product',
   standalone: true,
   imports: [CommonModule, MatProgressSpinnerModule, FormsModule, ReactiveFormsModule, MatButtonToggleModule, MatButtonModule],
+  providers: [StoreService, AuthService],
   templateUrl: './product.component.html',
   styleUrl: './product.component.scss'
 })

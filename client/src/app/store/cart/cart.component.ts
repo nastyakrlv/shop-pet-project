@@ -1,4 +1,4 @@
-import { Component, OnDestroy, untracked } from '@angular/core';
+import { Component, OnDestroy } from '@angular/core';
 import { StoreService } from '../store.service';
 import { Observable, ReplaySubject, catchError, finalize, forkJoin, map, mergeMap, takeUntil, throwError } from 'rxjs';
 import { HttpErrorResponse } from '@angular/common/http';
@@ -17,6 +17,7 @@ import { MatSnackBar, MatSnackBarHorizontalPosition, MatSnackBarModule, MatSnack
   selector: 'app-cart',
   standalone: true,
   imports: [CommonModule, MatButtonModule, MatProgressSpinnerModule, MatSnackBarModule],
+  providers: [StoreService, AuthService],
   templateUrl: './cart.component.html',
   styleUrl: './cart.component.scss'
 })

@@ -1,4 +1,4 @@
-import { Component, OnDestroy, OnInit } from '@angular/core';
+import { Component, OnDestroy } from '@angular/core';
 import { Router, RouterLink } from '@angular/router';
 import { AuthService } from '../../auth/auth.service';
 import { CommonModule } from '@angular/common';
@@ -13,6 +13,7 @@ import { ReplaySubject, takeUntil } from 'rxjs';
   selector: 'app-header',
   standalone: true,
   imports: [RouterLink, CommonModule, MatMenuModule, MatButtonModule, MatBadgeModule],
+  providers: [StoreService, AuthService],
   templateUrl: './header.component.html',
   styleUrl: './header.component.scss'
 })
