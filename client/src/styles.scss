@@ -41,38 +41,43 @@ body {
 }
 
 .mat-button-toggle-button {
-  height: 100%;
+  height: 100% !important;
 }
 
 .mat-button-toggle .mat-button-toggle-ripple {
-  display: none;
+  display: none !important;
 }
 
 .menu-list-mobile {
-
   a {
-    text-decoration: none;
-    color: #484848;
-    font-family: 'Poppins';
-    font-size: 16px;
-    font-weight: 400;
+    text-decoration: none !important;
+    color: #484848 !important;
+    font-family: 'Poppins', sans-serif !important;
+    font-size: 16px !important;
+    font-weight: 400 !important;
   }
 
   .active {
-    color: darken(#484848, 80%);
-    font-weight: 600;
+    color: darken(#484848, 80%) !important;
+    font-weight: 600 !important;
   }
 }
 
 .mat-badge-medium.mat-badge-above .mat-badge-content {
-  top: -2px;
+  top: -2px !important;
 }
 
 .mat-badge-medium.mat-badge-overlap.mat-badge-after .mat-badge-content {
-  right: -2px;
+  right: -2px !important;
+}
+
+.mat-badge-content {
+  font-size: 12px !important;
+  font-family: 'Poppins', sans-serif !important;
+  font-weight: 600 !important;
 }
 
 div .mat-mdc-snack-bar-label .mdc-snackbar__label {
-  font-family: 'Poppins', sans-serif;
-  text-align: center;
+  font-family: 'Poppins', sans-serif !important;
+  text-align: center !important;
 }
