@@ -14,7 +14,6 @@ import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
   selector: 'app-shop',
   standalone: true,
   imports: [MatPaginatorModule, CommonModule, RouterLink, MatProgressSpinnerModule],
-  providers: [StoreService],
   templateUrl: './shop.component.html',
   styleUrl: './shop.component.scss'
 })

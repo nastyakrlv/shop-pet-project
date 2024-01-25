@@ -13,7 +13,6 @@ import { ReplaySubject, takeUntil } from 'rxjs';
   selector: 'app-header',
   standalone: true,
   imports: [RouterLink, CommonModule, MatMenuModule, MatButtonModule, MatBadgeModule],
-  providers: [StoreService, AuthService],
   templateUrl: './header.component.html',
   styleUrl: './header.component.scss'
 })

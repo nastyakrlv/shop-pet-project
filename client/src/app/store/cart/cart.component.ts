@@ -17,7 +17,6 @@ import { MatSnackBar, MatSnackBarHorizontalPosition, MatSnackBarModule, MatSnack
   selector: 'app-cart',
   standalone: true,
   imports: [CommonModule, MatButtonModule, MatProgressSpinnerModule, MatSnackBarModule],
-  providers: [StoreService, AuthService],
   templateUrl: './cart.component.html',
   styleUrl: './cart.component.scss'
 })

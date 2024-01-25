@@ -19,7 +19,6 @@ import { LocalStorageKeys } from '../../types/localstorage-keys.enum';
   selector: 'app-product',
   standalone: true,
   imports: [CommonModule, MatProgressSpinnerModule, FormsModule, ReactiveFormsModule, MatButtonToggleModule, MatButtonModule],
-  providers: [StoreService, AuthService],
   templateUrl: './product.component.html',
   styleUrl: './product.component.scss'
 })
